@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>과제1</title>
+  <link rel="stylesheet" href="HW02_01.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">멋쟁이 반응형 사이트🦁</div>
+    <div class="nav">
+      <div>홈</div>
+      <div>서비스</div>
+      <div>문의</div>
+    </div>
+    <div class="menu-icon">☰</div>
+  </header>
+
+  <div class="container">
+    <div class="box viewport">현재 뷰포트의 너비: <span id = "width"></span>px</div>
+    <div class="box bounce">안녕하세요 멋쟁이 사자입니다</div>
+    <div class="box">콘텐츠 3</div>
+    <div class="box">콘텐츠 4</div>
+  </div>
+</body>
+<script>
+  const widthSpan = document.getElementById("width");
+  console.log(widthSpan);
+
+  function updateViewportWidth() {
+    widthSpan.textContent = window.innerWidth;
+  }
+
+  window.addEventListener("resize", updateViewportWidth);
+  window.addEventListener("load", updateViewportWidth);
+
+</script>
+
+</html>
